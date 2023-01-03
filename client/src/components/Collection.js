@@ -3,33 +3,28 @@ import FurnitureCard from "./FurnitureCard"
 
 function Collection(){
 
-    const [furniture, setFurniture] = useState([])
+    const [furnitures, setFurniture] = useState([])
 
     useEffect(() => {
         fetch('/furnitures')
             .then((r) => r.json())
-            .then(furniture => setFurniture(furniture))
+            .then(furnitures => setFurniture(furnitures))
     }, [])
-
+console.log(furnitures)
     function handleAdd(newFurniture) {
-        setFurniture([...furniture, newFurniture]);
+        setFurniture([...furnitures, newFurniture]);
     }
 
     function handleDeleteFurniture(id) {
-        const newFurnitureList = furniture.filter((oneFurniture) => 
+        const newFurnitureList = furnitures.filter((oneFurniture) => 
         oneFurniture.id !== id)
         setFurniture(newFurnitureList)
     }
 
-    const furnitureCard = furniture.map(() => (
+    const furnitureCards = furnitures.map((furniture) => (
         <FurnitureCard
             key={furniture.id}
-            id = {furniture.id}
-            name = {furniture.name}
-            image = {furniture.image}
-            type = {furniture.type.name}
-            brand = {furniture.brand.name}
-            brand_link = {furniture.brand.brand_link}
+           furniture= {furniture}
 
             onAddFurniture={handleAdd}
             handleDeleteFurniture={handleDeleteFurniture}
@@ -39,7 +34,7 @@ function Collection(){
 
     return(
         <>
-            <ul>{furnitureCard}</ul>
+            <ul>{furnitureCards}</ul>
         </>    
     )
 }

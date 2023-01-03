@@ -1,16 +1,17 @@
 class FurnituresController < ApplicationController
+    wrap_parameters format: []
     def index
-        render json: self.all
+        render json: Furniture.all
     end
 
     def create
-        furniture = self.create!(furniture_params)
-        render json: bean, status: :created
+        furniture = Furniture.create!(furniture_params)
+        render json: furniture, status: :created
     end
 
     private 
     def furniture_params
-        params.require(:type, :brand).permit(:name, :image, :type_id, :brand_id)
+        params.permit(:name, :image, :type_id, :brand_id)
     end
 
 

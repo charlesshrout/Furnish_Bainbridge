@@ -5,6 +5,7 @@ import Brands from "./Brands";
 import FurnForm from "./FurnForm";
 import About from "./About";
 import Contact from "./Contact"
+import Login from "./Login"
 import NavBar from "./NavBar"
 
 function App() {
@@ -31,6 +32,7 @@ function App() {
             <Route path="/about" element={<About />}/>
             <Route path="/contact" element={<Contact />}/>
             <Route path="/create" element={<FurnForm />}/>
+            <Route path="/login" element={<Login />}/>
           </Routes>
           </>
         ) : (
@@ -39,7 +41,8 @@ function App() {
             <Route path="/" element={<Collection />}/>
             <Route path="/brands" element={<Brands />}/>
             <Route path="/about" element={<About />}/>
-            <Route path="/contact" element={<Contact />}/>             
+            <Route path="/contact" element={<Contact />}/> 
+            <Route path="/login" element={<Login setUser= {setUser}/>}/>            
           </Routes>
           </>        
         )}
