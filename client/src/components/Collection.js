@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from "react";
 import FurnitureCard from "./FurnitureCard"
 
-function Collection(){
+function Collection({user}){
 
     const [furnitures, setFurniture] = useState([])
 
@@ -10,7 +10,7 @@ function Collection(){
             .then((r) => r.json())
             .then(furnitures => setFurniture(furnitures))
     }, [])
-console.log(furnitures)
+
     function handleAdd(newFurniture) {
         setFurniture([...furnitures, newFurniture]);
     }
@@ -25,6 +25,7 @@ console.log(furnitures)
         <FurnitureCard
             key={furniture.id}
            furniture= {furniture}
+           user={user}
 
             onAddFurniture={handleAdd}
             handleDeleteFurniture={handleDeleteFurniture}

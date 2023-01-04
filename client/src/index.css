@@ -5,7 +5,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  max-width: 900px;
+  max-width: px;
 }
 
 code {
@@ -17,19 +17,21 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 1px solid #ccc;
+  border-bottom: 1px solid rgb(7, 7, 7);
 }
 
 header a,
 header button {
+  min-width: 80px;
+  border-radius: 10px;
   font-size: 1rem;
   display: inline-block;
-  background-color: #fff8e7;
-  border: 1px solid salmon;
+  background-color: white;
+  border: 1px solid rgb(11, 11, 11);
   margin: 1rem;
   padding: 1rem;
   text-decoration: none;
-  color: salmon;
+  color: rgb(6, 5, 5);
   cursor: pointer;
 }
 

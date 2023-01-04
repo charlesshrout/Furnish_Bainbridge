@@ -4,6 +4,12 @@ class FurnituresController < ApplicationController
         render json: Furniture.all
     end
 
+    def destroy
+        furn = Furniture.find(params[:id])
+        furn.destroy
+        head :no_content
+    end
+
     def create
         furniture = Furniture.create!(furniture_params)
         render json: furniture, status: :created

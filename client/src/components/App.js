@@ -27,7 +27,7 @@ function App() {
         {user ? (
           <>
           <Routes>
-            <Route path="/" element={<Collection />}/>
+            <Route path="/" element={<Collection user={user}/>}/>
             <Route path="/brands" element={<Brands />}/>
             <Route path="/about" element={<About />}/>
             <Route path="/contact" element={<Contact />}/>
