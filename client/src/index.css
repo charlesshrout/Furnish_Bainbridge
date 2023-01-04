@@ -61,3 +61,8 @@ form input {
 form button[type="submit"] {
   width: 40%;
 }
+
+.card-container ul{
+  display: flex;
+  flex-direction: column;
+}

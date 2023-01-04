@@ -34,9 +34,9 @@ function Collection({user}){
 
 
     return(
-        <>
-            <ul>{furnitureCards}</ul>
-        </>    
+        <div style={{paddingTop: "5vh", paddingBottom: "5vh", paddingLeft: "5vw", paddingRight: "5vw"}}>
+            <div style={{display: "flex", flexWrap: "wrap", justifyContent: "space-between",}}>{furnitureCards}</div>
+        </div>    
     )
 }
 
