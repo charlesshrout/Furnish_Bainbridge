@@ -26,7 +26,7 @@ function Bar({ user, setUser }) {
               <Link className="link" style={{ flex: 1 }} to="/about">About</Link>
               <Link className="link" style={{ flex: 1 }} to="/contact">Contact Us</Link>
               <Link className="link" style={{ flex: 1 }} to="/create">Add Furniture</Link>
-              <button onClick={handleLogoutClick}>Logout</button> 
+              <button class="btn btn-accent btn-outline" onClick={handleLogoutClick}>Logout</button> 
               <h3>Welcome, {user.username}!</h3>
             </div>
           </>
