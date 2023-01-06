@@ -20,6 +20,6 @@ User.create(username: "alex_erps", password_digest: "chuckles")
 
 puts "seeding furniture..."
 
-Furniture.create(name: "Adelaide Sofa", image: "https://secure.img1-cg.wfcdn.com/im/02628646/compr-r85/9695/96953347/adelaide-sofa.jpg", brand_id: b1.id, type_id: t1.id )
+Furniture.create(name: "Adelaide", image: "https://secure.img1-cg.wfcdn.com/im/02628646/compr-r85/9695/96953347/adelaide-sofa.jpg", brand_id: b1.id, type_id: t1.id )
 Furniture.create(name: "Yanko", image: "https://www.yankodesign.com/images/design_news/2019/08/yd_chair_designs_layout.jpg", brand_id: b2.id, type_id: t2.id )
-Furniture.create(name: "Jute Rustic", image: "http://cdn.home-designing.com/wp-content/uploads/2021/09/geometric-abstract-center-rugs-for-living-room-large-scale-pattern-statement-piece-genuine-wool-rug-colorful-carved-edges-3D-decorative-600x600.jpg", brand_id: b3.id, type_id: t3.id )
+Furniture.create(name: "Jute", image: "http://cdn.home-designing.com/wp-content/uploads/2021/09/geometric-abstract-center-rugs-for-living-room-large-scale-pattern-statement-piece-genuine-wool-rug-colorful-carved-edges-3D-decorative-600x600.jpg", brand_id: b3.id, type_id: t3.id )

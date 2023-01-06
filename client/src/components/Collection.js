@@ -35,7 +35,7 @@ function Collection({user}){
 
     return(
         <div style={{paddingTop: "5vh", paddingBottom: "5vh", paddingLeft: "5vw", paddingRight: "5vw"}}>
-            <div style={{display: "flex", flexWrap: "wrap", justifyContent: "space-between",}}>{furnitureCards}</div>
+            <div style={{display: "flex", flexWrap: "wrap", justifyContent: "space-between"}}>{furnitureCards}</div>
         </div>    
     )
 }
